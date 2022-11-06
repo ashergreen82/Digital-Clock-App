@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Digital Clock</title>
+    <style>
+        body {
+            background-color: rgb(102, 93, 93);
+        }
+
+        h1 {
+            font-size: 90px;
+            text-align: center;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>A Simple Digital Clock</h2>
+    <script type="text/javascript">
+
+        var time = new Date();
+        var date = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
+        var myText;
+        myText = document.querySelector("h1")
+        // myMain.style.color = "white";
+        // myMain.style.height = "50px";
+        // myMain.style.width = "50%";
+        // myMain.style.backgroundColor = "lightgreen";
+        document.innerHTML = "<h1>Hello world!</h1>";
+        document.writeln("\n")
+        document.writeln(date);
+        let l = [1, 2, 1, 2, 3]
+        for (let i in l) {
+            document.writeln(i);
+        }
+        t = "Hello World";
+        for (let c of t) {
+            document.writeln(c);
+        }
+
+        var main = function () {
+            var fahr;
+            fahr = prompt("Enter the temperature in F: ");
+            const ratio = 5.0 / 9.0;
+            let cel = (fahr - 32) * ratio;
+            document.writeln("\nThe temperature in C is: " + cel);
+            return cel
+        }
+        temperature = main()
+        document.writeln(temperature)
+        for (let i = 0; i <= temperature; i++) {
+            // document.writeln(date);
+            document.innerHTML = "<h1>Hello world!</h1>";
+            document.write(i);
+        }
+    </script>
+</body>
+
+</html>
