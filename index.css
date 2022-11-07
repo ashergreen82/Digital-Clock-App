@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(102, 93, 93);
+}
+
+h1 {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+}
