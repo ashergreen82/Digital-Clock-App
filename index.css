@@ -27,6 +27,13 @@ p {
     color: white;
 }
 
+#clock {
+    font-size: 30px;
+    text-align: center;
+    color: pink;
+    margin: 30px
+}
+
 div {
     font-size: 30px;
     text-align: center;
