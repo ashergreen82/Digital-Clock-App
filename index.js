@@ -4,12 +4,12 @@ const time = new Date();
 const month = time.getMonth();
 const year = time.getFullYear();
 const day = time.getDay();
-// var hour = time.getHours();
-const hour = 4;
-// var minutes = time.getMinutes();
-const minutes = 4;
-// var seconds = time.getSeconds();
-const seconds = 4;
+var hour = time.getHours();
+// const hour = 4;
+var minutes = time.getMinutes();
+// const minutes = 4;
+var seconds = time.getSeconds();
+// const seconds = 4;
 const date = time.getDate();
 // var date = 23;
 var number_suffix = which_number_suffix_to_use(date);
@@ -23,7 +23,7 @@ document.getElementById("date").innerHTML = date_display;
 function which_number_prefix_to_use(time) {
     time = time.toString();
     if (time.length < 2) {
-        number_prefix = 0
+        number_prefix = "0"
     } else {
         number_prefix = ""
     }
