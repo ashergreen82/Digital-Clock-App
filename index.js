@@ -41,30 +41,30 @@ function get_and_display_time() {
         date = date.toString();
         if (date.length < 2) {
             if (date == 1) {
-                number_suffix = "st";
+                return "st";
             }
             if (date == 2) {
-                number_suffix = "nd";
+                return "nd";
             }
             if (date == 3) {
-                number_suffix = "rd";
+                return "rd";
             } else {
-                number_suffix = "th";
+                return "th";
             }
-            return number_suffix;
+            // return number_suffix;
         } else if (date.length == 2) {
             if (date[1] == 1) {
-                number_suffix = "st";
+                return "st";
             }
             if (date[1] == 2) {
-                number_suffix = "nd";
+                return "nd";
             }
             if (date[1] == 3 && date[0] == 2) {
-                number_suffix = "rd";
+                return "rd";
             } else {
-                number_suffix = "th";
+                return "th";
             }
-            return number_suffix;
+            return "";
         }
     }
 
