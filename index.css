@@ -1,9 +1,5 @@
 body {
     background-color: rgb(104, 104, 104);
-    /* background-image: url("/images/praying\ cat.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 h1 {
@@ -34,7 +30,7 @@ p {
 #clock {
     font-size: 30px;
     text-align: center;
-    color: pink;
+    color: white;
     margin: 30px
 }
 
@@ -44,5 +40,5 @@ div {
     margin-top: 40px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: orange;
+    color: white;
 }

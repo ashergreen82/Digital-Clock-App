@@ -1,25 +1,29 @@
-
 function get_and_display_time() {
+    //I created a list of the months and days of the week, this is needed so I can spell it out instead of using numbers.
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    //This is the line that grabs the current date.  The lines after this one grabs the particular elements needed for the clock to function.
     const time = new Date();
-    const month = time.getMonth();
-    const year = time.getFullYear();
-    const day = time.getDay();
-    var hour = time.getHours();
-    // const hour = 4;
-    var minutes = time.getMinutes();
-    // const minutes = 4;
-    var seconds = time.getSeconds();
-    // const seconds = 4;
-    const date = time.getDate();
-    // var date = 23;
-    var number_suffix = which_number_suffix_to_use(date);
-    const number_prefix_hour = which_number_prefix_to_use(hour);
-    const number_prefix_minutes = which_number_prefix_to_use(minutes);
-    const number_prefix_seconds = which_number_prefix_to_use(seconds);
-    const current_time = number_prefix_hour + hour + ":" + number_prefix_minutes + minutes + ":" + number_prefix_seconds + seconds;
-    const date_display = weekday[day] + "," + " " + months[month] + " " + date + number_suffix + " " + time.getFullYear();
+    let month = time.getMonth();
+    let year = time.getFullYear();
+    let day = time.getDay();
+    let hour = time.getHours();
+    let minutes = time.getMinutes();
+    let seconds = time.getSeconds();
+    let date = time.getDate();
+
+    // These lines here then execute the necessary functions to determine what the prefix and suffixes of the numbers should be.
+    let number_suffix = which_number_suffix_to_use(date);
+    let number_prefix_hour = which_number_prefix_to_use(hour);
+    let number_prefix_minutes = which_number_prefix_to_use(minutes);
+    let number_prefix_seconds = which_number_prefix_to_use(seconds);
+
+    // These lines here are ussed to setup the display of how the time should look.
+    let current_time = number_prefix_hour + hour + ":" + number_prefix_minutes + minutes + ":" + number_prefix_seconds + seconds;
+    let date_display = weekday[day] + "," + " " + months[month] + " " + date + number_suffix + " " + time.getFullYear();
+
+    // These two lines display where in the HTML code to place the time and date.
     document.getElementById("clock").innerHTML = current_time;
     document.getElementById("date").innerHTML = date_display;
 
@@ -65,15 +69,7 @@ function get_and_display_time() {
     }
 
 }
-// get_and_display_time();
-// setTimeout(get_and_display_time, 5000);
 
-// let timer = setTimeout(function myTimer() {
-//     get_and_display_time();
-//     timer = setTimeout(get_and_display_time, 1000);
-// }, 1000);
-
-setInterval(get_and_display_time(), 1000);
-// while (true) {
-//     get_and_display_time()
-// }
+// This setInterval() command, what a nifty little function!!!!  I need to be careful there, the command doesn't work if the () are placed after the function call.
+// So it's function, not function(). 
+setInterval(get_and_display_time, 1000);
